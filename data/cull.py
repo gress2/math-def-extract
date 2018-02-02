@@ -1,3 +1,14 @@
+'''
+Note: You probably will just want to deal with the generated committed
+dataframe directly but committing these scripts in case we need to
+modify what and how we're extracting data from the dumps.
+
+This script should be run on each xml pulled from the en-wiki dump.
+It searches the articles within the xml and outputs only the
+articles containing mathematical expressions in the math
+directory. When processing large xml files, its not feasible to load
+the entire xml tree into memory so we use lxml.etree.iterparse instead
+'''
 from sys import argv
 from lxml import etree
 
