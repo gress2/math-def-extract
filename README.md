@@ -15,7 +15,7 @@ Install pip dependencies:
 pip install -r requirements.txt
 ```
 
-#### Getting the data
+#### Getting the data (optional)
 It's recommended to just work directly with the committed dataframe, data/math_articles.pd. If you want to go through data downloading and processing for whatever reason, you can do the following:
 
 ```
