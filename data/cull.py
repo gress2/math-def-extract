@@ -34,7 +34,7 @@ mathroot = etree.Element('pages')
 with open('math/' + fname + '_math', 'ab') as f:
     for event, element in etree.iterparse(fname, tag=nsmap['page']):
         text = element.find(nsmap['revision']).find(nsmap['text']).text
-        if text is not None and '{{math|' in text:
+        if text is not None and (('{{math|' in text) or ('&lt;math' in text)):
             page = etree.Element('page')
             page.text = text
             mathroot.append(page)
